@@ -68,7 +68,8 @@ public class Scheduler {
 				}
 				else{
 					System.out.println("Process " + current.pid + " finished.");
-				}
+					manager.deallocMem(current.pid);
+					}
 			}
 			
 			//If all processes in ReadyQ is finished and the cyclesDone < cycles, add processes from WaitQ
